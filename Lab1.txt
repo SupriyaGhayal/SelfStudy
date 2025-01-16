@@ -1,0 +1,63 @@
+package com.demo;
+
+public class second {
+
+	public static void main(String[] args) 
+	{
+		
+		System.out.println("Hello World");
+		
+
+	}
+
+}
+
+
+
+output  :
+                 Hello World
+
+
+
+
+
+
+
+
+package lab;
+
+public class primetivedemo {
+
+	public static void main(String[] args) {
+		
+		char t = 'S';
+		int u = 25;
+		byte v = 4;
+		short w = 34;
+		double n = 8.345;
+		float s = 5.55f;
+		long m = 9785;
+		
+		System.out.println("char:"+t);
+		System.out.println("int :"+u);
+		System.out.println("byte :"+v);
+		System.out.println("short :"+w);
+		System.out.println("double :"+n);
+		System.out.println("float :"+s);
+		System.out.println("long :"+m);
+
+	}
+
+}
+
+
+
+output :
+                 char:S
+                 int :25
+                 byte :4
+                 short :34
+                 double :8.345
+                 float :5.55
+                 long :9785
+
