@@ -1,0 +1,102 @@
+package com.demo;
+
+public class First {
+
+	public static void main(String[] args)
+	{
+		/*
+		 * declaration statement
+		 * int sub1;
+		 * initialization statement
+		 * sub1=88;
+		 */
+		
+		
+		int sub1=88;       //initialization  statement 
+		int sub2=80; 	
+		int sub3=78; 	
+		int sub4=44; 	
+		int sub5=68;
+		int total=(sub1+sub2+sub3+sub4+sub5);  //total calculate
+		System.out.println("Total :"+ total);  //printing total
+		
+		
+		// percentage calculate to another way
+		
+				 float p= (float)total;      //int total convert into float called as the TYPECASTING   
+				 float percentage = (float) ((p /500.0)*100.0);
+				 System.out.println("percentage :" + percentage +  "%");
+				
+			//here 500 means a 5 value you are giving when you can give the 7 value then you can divide total value the the 700 similar as ita	 
+		
+		/*
+		//calculate percentage
+		 *  int n=5;
+	    float percentage;
+		percentage = (total /n);
+		System.out.println("percentage :" + percentage +  "%");
+		*/
+		
+		
+
+	}
+
+}
+
+
+Output : 
+           Total :358
+           percentage :71.6%
+
+
+
+
+
+
+
+
+
+package com.demo;
+
+public class Area {
+
+	public static void main(String[] args) {
+		
+		// Area of Rectangle
+		int length = 5;
+		int breadth = 10;
+		
+		int area_rectangle =(length*breadth);
+		System.out.println("Area of rectangle : "+ area_rectangle);
+		
+		
+		//Area of triangle
+		float base = 10.5f;
+		float height =11.5f;
+		
+		float area_triangle = ((1/2)*(base*height));
+		System.out.println("Area of triangle :"+area_triangle);
+		
+		
+		//Area of Square
+		int side =5;
+		System.out.println("Area of square :"+ (side*side));
+		
+		
+		//Area of circle
+		double pi =3.14;
+		double radius = 5.0;
+		double area_circle = (pi*radius*radius);
+		System.out.println("Area of circle :"+ area_circle);
+		
+
+	}
+
+}
+
+Output : 
+           Area of rectangle : 50
+           Area of triangle :0.0
+           Area of square :25
+           Area of circle :78.5
+
