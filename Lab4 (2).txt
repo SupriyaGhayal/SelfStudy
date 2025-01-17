@@ -1,0 +1,131 @@
+1.demonstrate  use of  type casting 
+
+
+package lab;
+
+public class typecasting {
+
+	
+	    public static void main(String[] args) {
+	        
+	      
+	        int intVar = 100;
+	        double doubleVar = intVar; 
+	        System.out.println("Implicit Type Casting:");
+	        System.out.println("int value: " + intVar);
+	        System.out.println("double value after casting: " + doubleVar);
+	        
+
+	        double doubleValue = 9.78;
+	        int intValue = (int) doubleValue; 
+	        System.out.println("\nExplicit Type Casting:");
+	        System.out.println("double value: " + doubleValue);
+	        System.out.println("int value after casting: " + intValue);
+	        
+	      
+	        char charVar = 'A';
+	        int charToInt = (int) charVar; 
+	        System.out.println("\nType Casting between Char and Int:");
+	        System.out.println("char value: " + charVar);
+	        System.out.println("int value after casting: " + charToInt);
+	        
+
+	        int intValueForByte = 130;
+	        byte byteValue = (byte) intValueForByte; 
+	        System.out.println("\nType Casting between Int and Byte:");
+	        System.out.println("int value: " + intValueForByte);
+	        System.out.println("byte value after casting: " + byteValue);
+	    }
+	}
+
+
+
+output :
+
+Implicit Type Casting:
+int value: 100
+double value after casting: 100.0
+
+Explicit Type Casting:
+double value: 9.78
+int value after casting: 9
+
+Type Casting between Char and Int:
+char value: A
+int value after casting: 65
+
+Type Casting between Int and Byte:
+int value: 130
+byte value after casting: -126
+
+
+
+
+
+
+2. demonstrate use of local, instance and static variables 
+
+
+
+package lab;
+
+public class variableDemo {
+	
+	    
+	   
+	    int instanceVar = 10;
+	    
+	    
+	    static int staticVar = 20;
+	    
+	    public void displayInstanceVariable() {
+	       
+	        int localVar = 30;
+	        
+	       
+	        System.out.println("Instance Variable: " + instanceVar);
+	        System.out.println("Static Variable: " + staticVar);
+	        System.out.println("Local Variable: " + localVar);
+	    }
+	    
+	    public static void main(String[] args) {
+	       
+	        variableDemo obj1 = new variableDemo();
+	        
+	       
+	        obj1.displayInstanceVariable();
+	        
+	       
+	        obj1.instanceVar = 100;
+	        variableDemo.staticVar = 200;
+	        
+	       
+	        System.out.println("\nAfter modifying instance and static variables:");
+	        obj1.displayInstanceVariable();
+	        
+	        
+	        variableDemo obj2 = new variableDemo();
+	        System.out.println("\nFor another object (obj2):");
+	        obj2.displayInstanceVariable();
+	    }
+	}
+
+
+ output: 
+
+
+Instance Variable: 10
+Static Variable: 20
+Local Variable: 30
+
+After modifying instance and static variables:
+Instance Variable: 100
+Static Variable: 200
+Local Variable: 30
+
+For another object (obj2):
+Instance Variable: 10
+Static Variable: 200
+Local Variable: 30
+
+
