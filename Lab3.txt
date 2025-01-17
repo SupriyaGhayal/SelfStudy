@@ -1,0 +1,83 @@
+1)Demonstrate Primitive DataType
+
+package lab;
+
+public class premitive1 {
+	public static void main(String args[]) 
+	{
+		char m = 'Q';
+		int n = 92;
+		byte o = 4;
+		short p = 48;
+		double q = 8.444;
+		float r = 2.897f;
+		long s =78785;
+		
+		System.out.println("char:"+m);
+		System.out.println("int :"+n);
+		System.out.println("byte :"+o);
+		System.out.println("short :"+p);
+		System.out.println("double :"+q);
+		System.out.println("float :"+r);
+		System.out.println("long :"+s);
+	}
+
+}
+
+
+output  :
+            char:Q
+            int :92
+            byte :4
+            short :48
+            double :8.444
+            float :2.897
+            long :78785
+
+
+
+
+2) Student Result
+
+
+
+package lab;
+
+public class StudentDemo {
+
+	public static void main(String[] args) {
+		int[] marks = {24,33,95,99,54}; 
+        
+        int totalMarks = 0;
+        
+        for (int mark : marks) 
+        {
+            totalMarks += mark;
+        }
+
+        double percentage = (double) totalMarks / marks.length;
+
+       
+        String result = percentage >= 50 ? "Pass" : "Fail";
+    
+        System.out.println("Total Marks: " + totalMarks);
+        
+        System.out.println("Percentage: " + percentage + "%");
+        
+        System.out.println("Result: " + result);
+
+	}
+
+}
+
+
+output :
+           Total Marks: 305
+           Percentage: 61.0%
+           Result: Pass
+
+
+
+
+
+
