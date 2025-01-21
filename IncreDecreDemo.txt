@@ -1,0 +1,56 @@
+package com.demo;
+
+public class IncrDecrDemo {
+
+	public static void main(String[] args) {
+		
+		int demo = 100;
+		int demo1;
+		demo1 = ++demo;
+		System.out.println("Pre-Increment : "+ demo1);
+		
+		demo1 = --demo;
+		System.out.println("Pre-Decrement : "+ demo1);
+		
+		demo1=demo++;
+		System.out.println("Post-Increment : "+ demo1);
+		
+		demo1=demo--;
+		System.out.println("Post-Decrement : "+ demo);
+		System.out.println("Final  demo : "+ demo);
+		
+		
+		
+		
+		
+		int demo2 = demo+2;
+		System.out.println("Final demo1: "+ demo2);
+		
+		demo2 = demo2+2;
+		System.out.println("Final demo2: "+ demo2);
+		
+		
+		demo2+=2;                                        // shorthand operator
+		System.out.println("Final demo3: "+ demo2);
+		
+		demo2+=3;
+		System.out.println("Final demo4: "+ demo2);
+
+		
+		
+	}
+
+}
+
+
+output:
+Pre-Increment : 101
+Pre-Decrement : 100
+Post-Increment : 100
+Post-Decrement : 100
+Final  demo : 100
+Final demo1: 102
+Final demo2: 104
+Final demo3: 106
+Final demo4: 109
+
