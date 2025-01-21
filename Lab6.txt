@@ -1,0 +1,81 @@
+1.show the entered year is leap year or not 
+
+package lab;
+import java.util.Scanner;
+
+public class Leapyear {
+	public static void main(String[] args) {
+       
+        Scanner scanner = new Scanner(System.in);
+       
+        System.out.print("Enter a year: ");
+        int year = scanner.nextInt();
+        
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+        
+        
+        scanner.close();
+    }
+}
+
+
+output:
+                 Enter a year: 2025
+                 2025 is not a leap year.
+
+
+
+
+
+
+
+2.print reverse of entered number.
+
+package lab;
+import java.util.Scanner;
+
+public class reverse {
+
+	public static void main(String[] args)
+	
+	{
+         Scanner scanner = new Scanner(System.in);
+        
+       
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        
+        int reversedNumber = 0;
+        
+       
+        while (number != 0) 
+        {
+            int digit = number % 10;         
+            reversedNumber = reversedNumber * 10 + digit;  
+            number = number / 10;            
+        }
+       
+        System.out.println("Reversed Number: " + reversedNumber);
+        
+       
+        scanner.close();
+    }
+
+	
+
+	}
+
+
+output:
+
+Enter a number: 987
+Reversed Number: 789
+
+
+
+
+
