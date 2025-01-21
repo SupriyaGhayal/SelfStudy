@@ -1,0 +1,302 @@
+
+1.employee details and calculate incremented salary
+
+
+
+package lab;
+
+public class Bean {
+	private String name;
+    private int id;
+    private double salary;
+    private String department;
+
+
+	
+
+
+		    public Bean(String name, int id, double salary, String department) 
+		    {
+		        this.name = name;
+		        this.id = id;
+		        this.salary = salary;
+		        this.department = department;
+		    }
+
+		
+		    public String getName() {
+		        return name;
+		    }
+
+		    public void setName(String name) {
+		        this.name = name;
+		    }
+
+		    public int getId() {
+		        return id;
+		    }
+
+		    public void setId(int id) {
+		        this.id = id;
+		    }
+
+		    public double getSalary() {
+		        return salary;
+		    }
+
+		    public void setSalary(double salary) {
+		        this.salary = salary;
+		    }
+
+		    public String getDepartment() {
+		        return department;
+		    }
+
+		    public void setDepartment(String department) {
+		        this.department = department;
+		    }
+
+		   
+		    public double calculateIncrementedSalary(double incrementPercentage) {
+		        return salary + (salary * incrementPercentage / 100);
+		    }
+
+
+		    public void printEmployeeDetails() {
+		        System.out.println("Employee ID: " + id);
+		        System.out.println("Name: " + name);
+		        System.out.println("Department: " + department);
+		        System.out.println("Current Salary: $" + salary);
+		    }
+
+		   
+		    public static void main(String[] args) {
+		        // Create multiple Employee objects
+		        Bean emp1 = new  Bean("Ran Saudagar", 101, 50000, "IT");
+		        Bean emp2 = new  Bean("kishan saudagar", 102, 60000, "HR");
+		        Bean emp3 = new   Bean("akhil Gavali", 103, 70000, "Finance");
+
+
+		        System.out.println("Employee Details before salary increment:\n");
+
+		        emp1.printEmployeeDetails();
+		        System.out.println("Incremented Salary: $" + emp1.calculateIncrementedSalary(10) + "\n");
+
+		        emp2.printEmployeeDetails();
+		        System.out.println("Incremented Salary: $" + emp2.calculateIncrementedSalary(15) + "\n");
+
+		        emp3.printEmployeeDetails();
+		        System.out.println("Incremented Salary: $" + emp3.calculateIncrementedSalary(5) + "\n");
+		    }
+		
+
+
+	}
+
+
+
+
+output:
+
+
+Employee Details before salary increment:
+
+Employee ID: 101
+Name: Ran Saudagar
+Department: IT
+Current Salary: $50000.0
+Incremented Salary: $55000.0
+
+Employee ID: 102
+Name: kishan saudagar
+Department: HR
+Current Salary: $60000.0
+Incremented Salary: $69000.0
+
+Employee ID: 103
+Name: akhil Gavali
+Department: Finance
+Current Salary: $70000.0
+Incremented Salary: $73500.0
+
+
+
+
+
+
+
+
+2.student details aand calculate the percentage of student with all subject
+
+
+package lab;
+public class Bean1{
+    private String name;
+    private int id;
+    private int[] marks;  
+    private String result;
+
+   
+    public Bean1(String name, int id, int[] marks) {
+        this.name = name;
+        this.id = id;
+        this.marks = marks;
+        this.result = calculateResult();  
+    }
+
+    
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int[] getMarks() {
+        return marks;
+    }
+
+    public void setMarks(int[] marks) {
+        this.marks = marks;
+    }
+
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
+    }
+
+   
+    public double calculatePercentage() {
+        int totalMarks = 0;
+        for (int mark : marks) {
+            totalMarks += mark;
+        }
+        return (totalMarks / (double) marks.length);
+    }
+
+
+    public String calculateResult() {
+        double percentage = calculatePercentage();
+        if (percentage >= 50) {
+            return "Pass";
+        } else {
+            return "Fail";
+        }
+    }
+
+
+    public void printStudentDetails() {
+        System.out.println("Student ID: " + id);
+        System.out.println("Name: " + name);
+        System.out.print("Marks: ");
+        for (int mark : marks) {
+            System.out.print(mark + " ");
+        }
+        System.out.println();
+    }
+
+    
+    public static void main(String[] args) {
+        
+        int[] marks1 = {85, 90, 88, 92};  // Marks for student 1
+        int[] marks2 = {45, 50, 40, 38};  // Marks for student 2
+        int[] marks3 = {78, 82, 80, 85};  // Marks for student 3
+        int[] marks4 = {85, 70, 98, 62};  // Marks for student 1
+        int[] marks5 = {965, 98, 90, 88};  // Marks for student 2
+        int[] marks6 = {87, 89, 88, 75};  // Marks for student 3
+
+
+        Bean1 student1 = new Bean1("Shadha Gavali", 101, marks1);
+        Bean1 student2 = new Bean1("Rani Ghayal", 102, marks2);
+        Bean1 student3 = new Bean1("vaishnavi Kshirsagar", 103, marks3);
+        Bean1 student4 = new Bean1("Shweta Pandit", 104, marks1);
+        Bean1 student5 = new Bean1("anagha Urade", 105, marks2);
+        Bean1 student6 = new Bean1("nikita Roy", 106, marks3);
+
+
+
+        System.out.println("Student Details:\n");
+
+        student1.printStudentDetails();
+        System.out.println("Percentage: " + student1.calculatePercentage() + "%");
+        System.out.println("Result: " + student1.getResult() + "\n");
+
+        student2.printStudentDetails();
+        System.out.println("Percentage: " + student2.calculatePercentage() + "%");
+        System.out.println("Result: " + student2.getResult() + "\n");
+
+        student3.printStudentDetails();
+        System.out.println("Percentage: " + student3.calculatePercentage() + "%");
+        System.out.println("Result: " + student3.getResult() + "\n");
+        
+        student4.printStudentDetails();
+        System.out.println("Percentage: " + student4.calculatePercentage() + "%");
+        System.out.println("Result: " + student4.getResult() + "\n");
+
+        student5.printStudentDetails();
+        System.out.println("Percentage: " + student5.calculatePercentage() + "%");
+        System.out.println("Result: " + student5.getResult() + "\n");
+
+        student6.printStudentDetails();
+        System.out.println("Percentage: " + student6.calculatePercentage() + "%");
+        System.out.println("Result: " + student6.getResult() + "\n");
+
+    }
+}
+
+output:
+
+
+Student Details:
+
+Student ID: 101
+Name: Shadha Gavali
+Marks: 85 90 88 92 
+Percentage: 88.75%
+Result: Pass
+
+Student ID: 102
+Name: Rani Ghayal
+Marks: 45 50 40 38 
+Percentage: 43.25%
+Result: Fail
+
+Student ID: 103
+Name: vaishnavi Kshirsagar
+Marks: 78 82 80 85 
+Percentage: 81.25%
+Result: Pass
+
+Student ID: 104
+Name: Shweta Pandit
+Marks: 85 90 88 92 
+Percentage: 88.75%
+Result: Pass
+
+Student ID: 105
+Name: anagha Urade
+Marks: 45 50 40 38 
+Percentage: 43.25%
+Result: Fail
+
+Student ID: 106
+Name: nikita Roy
+Marks: 78 82 80 85 
+Percentage: 81.25%
+Result: Pass
+
+
+
+
