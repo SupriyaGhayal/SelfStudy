@@ -1,0 +1,180 @@
+              ...... student data......
+
+
+    1.student class....
+
+package com.Inheritance;
+
+public class student 
+{
+	
+	
+		int stud_id;
+		String stud_name;
+		double fees_status;
+		String stud_address;
+		
+		void setstudentdetails(int stud_id,String stud_name, double fees_status,String stud_address)
+		{
+		   this.stud_id = stud_id;
+		   this.stud_name = stud_name;
+		   this.fees_status = fees_status;
+		   this.stud_address = stud_address;
+			
+		}
+	void printstudentdetails()
+		{
+		
+			System.out.println("Student id        : "+ stud_id);
+			System.out.println("Student name      : "+ stud_name);
+			System.out.println("Student status    : "+ fees_status);
+			System.out.println("Student address   : "+ stud_address);
+		}	
+
+	}
+
+
+2.student fees class....
+
+
+package com.Inheritance;
+
+public class Fees extends student
+{
+	
+	double s_fees;
+	
+	void getfeestatus(double stud_fees)
+	{
+		this.s_fees= stud_fees;
+	}
+	
+	void printfeesstatus()
+	{
+		
+		if(s_fees == 0.0)
+		{
+			System.out.println("Not paid at all...!!");
+		}
+		
+		else {
+			if(s_fees == 10000.0)
+			{
+				System.out.println("Total paid...!!");
+			}
+			else
+			{
+				System.out.println("paid partially..!!");
+			}
+		}
+	}
+	
+
+}
+
+
+3.student sports class.....
+
+
+package com.Inheritance;
+
+public class Sports extends student
+{
+	
+	int sid;
+	
+	int sportids[] = {101,102,103,104,105};
+	
+	void getstudentid(int s)
+	{
+		this.sid = s;
+	}
+	
+	void printsportinfo()
+	{
+		int demo=0;
+		for(int i=0;i<sportids.length;i++)
+		{
+			
+		
+		if(sid==sportids[i])
+		{
+			demo++;
+			
+		}
+	    }
+		if(demo ==1)
+			System.out.println("sports marks added");
+			
+		else
+			System.out.println("Sports marks not added");
+	  }
+}
+
+
+
+ 
+4. student main class.....
+
+
+package com.Inheritance;
+
+public class studentMain {
+
+	public static void main(String[] args) 
+	{
+		
+		Fees f1 = new Fees();         //fees object
+		
+		double feestat;
+		
+	
+		f1.setstudentdetails(101,"abc",10000.0,"Hydrabad");      //set student info
+		
+		f1.printstudentdetails();            //print student
+		
+		feestat=f1.fees_status;
+		
+		f1.getfeestatus(feestat);         //print fees status
+		
+		f1.printfeesstatus();
+		
+		
+		Sports s1 = new Sports();    //sports object
+		Sports s2 = new Sports(); 
+		
+		s1.setstudentdetails(101,"abc",10000.0,"Hydrabad"); 
+		int studentid;
+		studentid = f1.stud_id;
+		s1.getstudentid(studentid);
+		
+		System.out.println("For student with ID : "+studentid);
+		s1.printsportinfo();
+
+		s2.setstudentdetails(101,"abc",10000.0,"Hydrabad"); 
+		s2.printsportinfo();
+		
+		
+		studentid = s2.stud_id;
+		System.out.println("For student with ID : "+studentid);
+		s2.getstudentid(studentid);
+		s2.printsportinfo();
+
+	}
+
+}
+
+output:
+
+Student id        : 101
+Student name      : abc
+Student status    : 10000.0
+Student address   : Hydrabad
+Total paid...!!
+For student with ID : 101
+sports marks added
+Sports marks not added
+For student with ID : 101
+sports marks added
+
+
