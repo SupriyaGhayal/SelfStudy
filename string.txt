@@ -1,0 +1,37 @@
+1. Program with getchar method of string
+
+
+
+package lab;
+
+public class get {
+
+	public static void main(String[] args)
+	{
+		//The getchar()method copies characters from a string to a array.
+
+		char[] Array= {'0','1','2','3','4','5','6','7','8','9'};
+		System.out.println(Array);
+		
+		String mystr="Hello, World";
+
+
+ //getchars(int start,int end,char[] destination,position index).
+		mystr.getChars(7, 12, Array, 3);
+
+  
+
+		System.out.println(Array);
+		
+
+	}
+
+}
+
+
+output:
+
+
+0123456789
+012World89
+
